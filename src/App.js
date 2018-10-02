@@ -1,20 +1,39 @@
 import React, { Component } from "react";
-import Card from "./Card";
-
-const pokemon = {
-  name: "Charmander",
-  type: "fire",
-  price: 20,
-  image: "https://cdn.bulbagarden.net/upload/7/73/004Charmander.png"
-};
+import List from "./Components/List/List";
+import { getPokemons } from "./Data/pokemonData";
 
 class App extends Component {
+  state = {
+    pokemonList: getPokemons()
+  };
+
+  filterListOfPokemon = (originalList, searchingText) => {
+    return originalList.filter(pokemon => {
+      const name = pokemon.name.toLowerCase();
+      const type = pokemon.type.toLowerCase();
+      if (name.includes(searchingText) || type.includes(searchingText)) {
+        return true;
+      }
+      return false;
+    });
+  };
+
+  search = event => {
+    const searchingText = event.target.value.toLowerCase();
+    this.setState({
+      pokemonList: this.filterListOfPokemon(getPokemons(), searchingText)
+    });
+  };
+
   render() {
+    const { pokemonList } = this.state;
     return (
       <div className="wrapper">
-        <div className="list">
-          <Card pokemon={pokemon} />
+        <div className="filterInput wrapper">
+          <input placeholder="Seach your Pokedex!" onChange={this.search} />
         </div>
+
+        <List listOfPokemon={pokemonList} />
       </div>
     );
   }

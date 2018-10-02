@@ -19,7 +19,7 @@ body {
 	flex: 1;
 }
 
-.logo img{
+.logo img {
 	width: 80px;
 	margin: 0 auto;
 	display: block;
@@ -59,7 +59,6 @@ body {
 	z-index: 1;
 	transition: all .25s ease-in-out;
 	height: 190px;
-
 }
 
 .cart--active {
@@ -98,7 +97,7 @@ body {
 	cursor: pointer;
 }
 
-.cartListItem__image  {
+.cartListItem__image {
 	width: 110px;
 }
 
@@ -249,42 +248,46 @@ body {
 	background-color: #b9b6d1;
 }
 
-.typeList li.normal {
+.normal {
 	background-color: #a6ab76;
 }
 
-.typeList li.electric {
+.electric {
 	background-color: #e3c260;
 }
 
-.typeList li.fire {
+.fire {
 	background-color: #fe7500;
 }
 
-.typeList li.water {
+.water {
 	background-color: #6a87f3;
 }
 
-.typeList li.grass {
+.grass {
 	background-color: #53d34e;
 }
 
-.typeList li.bug {
+.bug {
 	background-color: #a0bf04;
 }
 
-.typeList li.fight {
+.fight {
 	background-color: #cf000b;
 }
 
-.typeList li.psychic {
+.psychic {
 	background-color: #ff2482;
 }
 
-.typeList li.flying {
+.flying {
 	background-color: #b282f2;
 }
 
-.typeList li.fairy {
+.fairy {
 	background-color: #e999de
+}
+
+.ice {
+	background-color: #b282f2;
 }

@@ -49,13 +49,13 @@ const pokemons = [
   },
   {
     name: "Raikou",
-    type: "thunder",
+    type: "electric",
     price: 500,
     image: "https://cdn.bulbagarden.net/upload/c/c1/243Raikou.png"
   },
   {
     name: "Pikachu",
-    type: "thunder",
+    type: "electric",
     price: 80,
     image: "https://cdn.bulbagarden.net/upload/0/0d/025Pikachu.png"
   },
@@ -73,7 +73,7 @@ const pokemons = [
   },
   {
     name: "Zapdos",
-    type: "thunder",
+    type: "electric",
     price: 470,
     image: "https://cdn.bulbagarden.net/upload/e/e3/145Zapdos.png"
   },
@@ -94,9 +94,9 @@ const pokemons = [
     type: "psychic",
     price: 700,
     image: "https://cdn.bulbagarden.net/upload/b/b1/151Mew.png"
-  },
+  }
 ];
 
-export const getPokemons = () =>{
+export const getPokemons = () => {
   return pokemons;
-}
+};
